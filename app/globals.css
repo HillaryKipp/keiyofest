@@ -271,6 +271,13 @@ h1, h2, h3, .font-serif-heading {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .navbar-inner {
+    height: 72px;
+    padding: 0 16px;
+  }
+}
+
 .nav-links {
   display: flex;
   align-items: center;

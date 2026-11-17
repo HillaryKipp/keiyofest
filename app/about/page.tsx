@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { HeartHandshake, Sparkles, Target } from "lucide-react";
+import { Calendar, HeartHandshake, Target } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { ABOUT_DATA } from "@/data/about";
 import { SITE_IMAGES } from "@/data/site";
@@ -174,8 +174,8 @@ export default function AboutPage() {
           className="absolute inset-0 w-full h-full object-cover opacity-10"
         />
         <div className="container-site relative z-10 max-w-2xl">
-          <Sparkles className="w-9 h-9 text-[#e8c06a] mx-auto mb-4" aria-hidden="true" />
-          <h2 className="text-[clamp(28px,3.8vw,46px)] font-bold mb-4">
+          <Calendar className="w-9 h-9 text-[#e8c06a] mx-auto mb-4" aria-hidden="true" />
+          <h2 className="text-[clamp(28px,3.8vw,44px)] font-bold mb-4">
             Come and Experience the Spirit of Keiyo!
           </h2>
           <p className="text-white/85 mb-8">

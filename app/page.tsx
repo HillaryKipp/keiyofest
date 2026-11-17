@@ -4,10 +4,10 @@ import {
   Calendar,
   Compass,
   Drama,
+  Landmark,
   MapPin,
   Music,
   ShieldCheck,
-  Sparkles,
   Ticket,
   Users,
   Utensils,
@@ -20,7 +20,8 @@ import { NEWS_DATA } from "@/data/news";
 import { GALLERY_DATA } from "@/data/gallery";
 import { SITE_CONFIG, SITE_IMAGES } from "@/data/site";
 
-const highlightIcons = [Music, Utensils, Sparkles, Drama, Compass];
+const highlightIcons = [Music, Utensils, Landmark, Drama, Compass];
+const pillarIcons = [Music, Utensils, Landmark];
 
 export default function HomePage() {
   const previewPhotos = GALLERY_DATA.photos.slice(0, 4);
@@ -132,7 +133,7 @@ export default function HomePage() {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {HOME_DATA.intro.highlights.map((item, idx) => {
-                  const Icon = highlightIcons[idx] || Sparkles;
+                  const Icon = highlightIcons[idx] || Landmark;
                   const centerFifth = idx === 4 ? "col-span-2 sm:col-span-1 sm:col-start-2" : "";
                   return (
                     <div key={item.title} className={`peace-item ${centerFifth}`}>
@@ -200,33 +201,36 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {HOME_DATA.pillars.items.map((pillar, idx) => (
-              <div
-                key={pillar.title}
-                className="pillar-card reveal"
-                style={{ transitionDelay: `${idx * 0.12}s` }}
-              >
-                <img
-                  src={pillar.image}
-                  alt={pillar.imageAlt}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 pillar-card-overlay" />
-                <div className="relative z-10 p-7 text-white">
-                  <Sparkles className="w-8 h-8 text-[#e8c06a] mb-3" aria-hidden="true" />
-                  <h3 className="text-2xl sm:text-[26px] font-bold leading-snug mb-2">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-white/85 text-sm leading-relaxed mb-5">
-                    {pillar.description}
-                  </p>
-                  <Link href={pillar.href} className="btn btn-outline btn-sm">
-                    {pillar.cta}
-                  </Link>
+            {HOME_DATA.pillars.items.map((pillar, idx) => {
+              const PillarIcon = pillarIcons[idx] || Landmark;
+              return (
+                <div
+                  key={pillar.title}
+                  className="pillar-card reveal"
+                  style={{ transitionDelay: `${idx * 0.12}s` }}
+                >
+                  <img
+                    src={pillar.image}
+                    alt={pillar.imageAlt}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 pillar-card-overlay" />
+                  <div className="relative z-10 p-7 text-white">
+                    <PillarIcon className="w-8 h-8 text-[#e8c06a] mb-3" aria-hidden="true" />
+                    <h3 className="text-2xl sm:text-[26px] font-bold leading-snug mb-2">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-white/85 text-sm leading-relaxed mb-5">
+                      {pillar.description}
+                    </p>
+                    <Link href={pillar.href} className="btn btn-outline btn-sm">
+                      {pillar.cta}
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

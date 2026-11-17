@@ -44,7 +44,7 @@ export default function Navbar() {
             <img
               src={SITE_IMAGES.logo}
               alt={`${SITE_CONFIG.name} official logo`}
-              className="h-[82px] sm:h-[96px] w-auto object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
+              className="h-[52px] sm:h-[68px] lg:h-[80px] w-auto object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 

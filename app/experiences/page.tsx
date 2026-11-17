@@ -4,8 +4,8 @@ import {
   BookOpen,
   Compass,
   Drama,
+  Landmark,
   Music,
-  Sparkles,
   Users,
   Utensils,
 } from "lucide-react";
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/experiences/" },
 };
 
-const icons = [Music, Utensils, Sparkles, BookOpen, Drama, Users];
+const icons = [Music, Utensils, Landmark, BookOpen, Drama, Users];
 
 export default function ExperiencesPage() {
   return (
@@ -53,7 +53,7 @@ export default function ExperiencesPage() {
 
       {/* 6 Experiences Alternating Rows (matching /our-projects layout) */}
       {EXPERIENCES_DATA.experiences.map((exp, idx) => {
-        const Icon = icons[idx] || Sparkles;
+        const Icon = icons[idx] || Landmark;
         const isEven = idx % 2 === 1;
         return (
           <section
