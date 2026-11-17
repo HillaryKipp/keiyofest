@@ -1,0 +1,5 @@
+# Redirect common aliases to canonical trailing-slash routes
+/about-us /about/ 301
+/partner-with-us /partners/ 301
+/events /event/ 301
+/faq /contact/#faq 301
