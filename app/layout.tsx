@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
+import PageLoader from "@/components/PageLoader";
 import { SITE_CONFIG, SITE_IMAGES } from "@/data/site";
 
 const inter = Inter({
@@ -105,6 +106,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
         />
+        <PageLoader />
         <Navbar />
         <RevealObserver />
         <main className="flex-1">{children}</main>
