@@ -18,8 +18,8 @@ function PageLoaderOverlay() {
     const isInitial = !hasCompletedInitialLoad;
     hasCompletedInitialLoad = true;
 
-    const holdMs = prefersReduced ? 120 : isInitial ? 550 : 380;
-    const fadeMs = prefersReduced ? 150 : 350;
+    const holdMs = prefersReduced ? 250 : isInitial ? 1400 : 900;
+    const fadeMs = prefersReduced ? 200 : 500;
 
     let unmountTimer: ReturnType<typeof setTimeout> | undefined;
     const fadeTimer = setTimeout(() => {
@@ -41,7 +41,7 @@ function PageLoaderOverlay() {
     <div
       aria-live="polite"
       aria-label="Loading page"
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-[#0d1f12] select-none transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-[#0d1f12] select-none transition-opacity duration-500 ${
         fading ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
