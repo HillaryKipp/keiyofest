@@ -30,11 +30,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="reveal-left">
               <div className="section-label mb-3">{ABOUT_DATA.story.eyebrow}</div>
-              <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#1a2e1a] leading-tight">
+              <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#3b1508] leading-tight">
                 {ABOUT_DATA.story.heading}
               </h2>
               <div className="divider" />
-              <div className="space-y-4 text-[#4a5568] text-[16px] sm:text-[17px] leading-[1.8]">
+              <div className="space-y-4 text-[#6b4334] text-[16px] sm:text-[17px] leading-[1.8]">
                 {ABOUT_DATA.story.paragraphs.map((p, idx) => (
                   <p key={idx}>{p}</p>
                 ))}
@@ -48,12 +48,12 @@ export default function AboutPage() {
                   alt={ABOUT_DATA.story.imageAlt}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1f12]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2a0e05]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 bg-white/15 backdrop-blur-md border border-white/25 rounded-2xl p-5 text-white">
                   <p className="font-serif-heading text-xl font-bold">
                     {ABOUT_DATA.story.badgeTitle}
                   </p>
-                  <p className="text-xs sm:text-sm text-[#d8f3dc] mt-1">
+                  <p className="text-xs sm:text-sm text-[#f6dcb8] mt-1">
                     {ABOUT_DATA.story.badgeSubtitle}
                   </p>
                 </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision Quote Band */}
-      <section className="bg-[#1a2e1a] py-20 text-center px-6">
+      <section className="bg-[#3b1508] py-20 text-center px-6">
         <div className="container-site max-w-4xl">
           <div className="section-label section-label-light mb-4">
             {ABOUT_DATA.vision.eyebrow}
@@ -78,14 +78,14 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="section bg-[var(--cream)]">
         <div className="container-site max-w-4xl text-center">
-          <div className="w-16 h-16 rounded-[18px] bg-[#d8f3dc] text-[#2d6a4f] flex items-center justify-center mx-auto mb-6">
+          <div className="w-16 h-16 rounded-[18px] bg-[#f6dcb8] text-[#6b2410] flex items-center justify-center mx-auto mb-6">
             <Target className="w-8 h-8" aria-hidden="true" />
           </div>
           <div className="section-label mb-3">{ABOUT_DATA.mission.eyebrow}</div>
-          <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#1a2e1a] mb-5">
+          <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#3b1508] mb-5">
             {ABOUT_DATA.mission.heading}
           </h2>
-          <p className="text-lg sm:text-xl text-[#4a5568] leading-relaxed">
+          <p className="text-lg sm:text-xl text-[#6b4334] leading-relaxed">
             {ABOUT_DATA.mission.statement}
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
         <div className="container-site">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="section-label mb-3">{ABOUT_DATA.objectives.eyebrow}</div>
-            <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#1a2e1a]">
+            <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#3b1508]">
               {ABOUT_DATA.objectives.heading}
             </h2>
           </div>
@@ -109,10 +109,10 @@ export default function AboutPage() {
                   idx === 6 ? "md:col-span-2 lg:col-span-1 lg:col-start-2" : ""
                 }`}
               >
-                <div className="w-11 h-11 rounded-full bg-[#d8f3dc] text-[#2d6a4f] font-serif-heading font-bold text-lg flex items-center justify-center mb-4">
+                <div className="w-11 h-11 rounded-full bg-[#f6dcb8] text-[#6b2410] font-serif-heading font-bold text-lg flex items-center justify-center mb-4">
                   {idx + 1}
                 </div>
-                <p className="text-[#1a2e1a] font-medium text-base leading-relaxed">
+                <p className="text-[#3b1508] font-medium text-base leading-relaxed">
                   {obj}
                 </p>
               </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       {/* Geography / Venue */}
-      <section className="bg-[#0d1f12] py-20 text-white">
+      <section className="bg-[#2a0e05] py-20 text-white">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -141,7 +141,7 @@ export default function AboutPage() {
                     key={s.label}
                     className="rounded-2xl bg-white/10 border border-white/15 p-5"
                   >
-                    <div className="font-serif-heading text-3xl font-bold text-[#74c69d]">
+                    <div className="font-serif-heading text-3xl font-bold text-[#f7a21b]">
                       {s.value}
                     </div>
                     <div className="text-xs uppercase tracking-wider text-white/70 mt-1">
@@ -174,12 +174,12 @@ export default function AboutPage() {
           className="absolute inset-0 w-full h-full object-cover opacity-10"
         />
         <div className="container-site relative z-10 max-w-2xl">
-          <Calendar className="w-9 h-9 text-[#e8c06a] mx-auto mb-4" aria-hidden="true" />
+          <Calendar className="w-9 h-9 text-[#fbbf3c] mx-auto mb-4" aria-hidden="true" />
           <h2 className="text-[clamp(28px,3.8vw,44px)] font-bold mb-4">
             Come and Experience the Spirit of Keiyo!
           </h2>
           <p className="text-white/85 mb-8">
-            Join us on Thursday, 24th December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County.
+            Join us on Wednesday, 23rd December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/tickets/" className="btn btn-earth">

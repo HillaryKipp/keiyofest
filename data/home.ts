@@ -11,16 +11,16 @@ export const HOME_DATA = {
     partnerCta: { label: "Become a Partner", href: "/partners/" },
   },
   stats: [
-    { value: 24, suffix: " Dec", label: "2026 Celebration Date" },
-    { value: 6, suffix: "", label: "Cultural Experiences" },
+    { value: 23, suffix: " Dec", label: "2026 Celebration Date" },
+    { value: 8, suffix: "", label: "Festival Activities" },
     { value: 7, suffix: "", label: "Core Objectives" },
-    { value: 4, suffix: "", label: "Ticket Categories" },
+    { value: 3, suffix: "", label: "Ticket Categories" },
   ],
   intro: {
-    eyebrow: "Celebrating Our Heritage, Identity and Unity",
+    eyebrow: "Our Culture, Our Pride, Our Unity",
     heading: "More Than a Celebration",
     paragraphs: [
-      "Join us on 24th December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County, as we celebrate our heritage through traditional dances, music, food, cultural exhibitions, tourism and entertainment.",
+      "Join us on 23rd December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County, as we celebrate our heritage through traditional dances, music, food, cultural exhibitions, tourism and entertainment.",
       "This is more than a celebration. It is an opportunity to reconnect with our roots, preserve our identity, promote cultural tourism and unite generations. Come and experience the spirit of Keiyo!",
     ],
     ctaLabel: "Read More About Us",
@@ -55,9 +55,14 @@ export const HOME_DATA = {
     ],
   },
   visionBand: {
-    quote:
-      "Celebrating Our Heritage, Preserving Our Identity and Promoting Unity.",
+    quote: "Our Culture, Our Pride, Our Unity.",
     attribution: "Theme — KEIYO CULTURAL FEST 2026",
+  },
+  activities: {
+    eyebrow: "What to Expect",
+    heading: "Activities",
+    ticketsHeading: "Tickets Pricing",
+    ticketsCta: { label: "Book Your Ticket", href: "/tickets/" },
   },
   pillars: {
     eyebrow: "Festival Experiences",
@@ -95,7 +100,7 @@ export const HOME_DATA = {
     ],
   },
   flagshipBanner: {
-    badge: "Thursday, 24th December 2026",
+    badge: "Wednesday, 23rd December 2026",
     heading: "Secure Your Place at KEIYO CULTURAL FEST 2026",
     description:
       "Be part of this extraordinary celebration of culture, heritage and unity at Buffalo Safaris – Kolol, Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya.",
@@ -103,7 +108,7 @@ export const HOME_DATA = {
     secondaryCta: { label: "Event Information", href: "/event/" },
     highlights: [
       { value: "Kolol", label: "Buffalo Safaris Venue" },
-      { value: "4", label: "Ticket Categories" },
+      { value: "3", label: "Ticket Categories" },
       { value: "Rimoi", label: "Wildlife Excursions" },
     ],
     targetCardTitle: "Event Highlights",

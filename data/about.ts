@@ -4,7 +4,7 @@ export const ABOUT_DATA = {
   hero: {
     eyebrow: "About Us",
     title: "About KEIYO CULTURAL FEST",
-    subtitle: "Celebrating Our Heritage, Preserving Our Identity and Promoting Unity.",
+    subtitle: "Our Culture, Our Pride, Our Unity.",
     image: SITE_IMAGES.hero.src,
     imageAlt: SITE_IMAGES.hero.alt,
   },
@@ -20,7 +20,7 @@ export const ABOUT_DATA = {
     image: SITE_IMAGES.kalenjinHomestead.src,
     imageAlt: SITE_IMAGES.kalenjinHomestead.alt,
     badgeTitle: "Annual Cultural Celebration",
-    badgeSubtitle: "24th December 2026 • Elgeyo Marakwet County",
+    badgeSubtitle: "23rd December 2026 • Elgeyo Marakwet County",
   },
   vision: {
     eyebrow: "Our Vision",
@@ -52,7 +52,7 @@ export const ABOUT_DATA = {
     description:
       "Hosted at Buffalo Safaris – Kolol along the scenic Iten–Kabarnet Road, KEIYO CULTURAL FEST 2026 connects the cultural heartland of the Keiyo people with the natural splendour of the Kerio Valley and Rimoi National Reserve.",
     stats: [
-      { value: "24 Dec", label: "2026 Event Date" },
+      { value: "23 Dec", label: "2026 Event Date" },
       { value: "Kolol", label: "Iten–Kabarnet Road" },
     ],
     image: SITE_IMAGES.itenLandscape.src,

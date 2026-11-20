@@ -24,10 +24,10 @@ export default function NewsPage() {
       />
 
       {/* Category Pills */}
-      <section className="py-8 bg-[var(--cream)] border-b border-[#d8f3dc]">
+      <section className="py-8 bg-[var(--cream)] border-b border-[#f6dcb8]">
         <div className="container-site">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2d6a4f] mr-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#6b2410] mr-2">
               Topics:
             </span>
             {NEWS_DATA.categories.map((cat) => (
@@ -58,24 +58,24 @@ export default function NewsPage() {
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <span className="tag tag-green">{post.category}</span>
                   </div>
-                  <p className="text-xs text-[#4a5568] mb-2 font-medium flex items-center gap-1.5">
-                    <Newspaper className="w-3.5 h-3.5 text-[#40916c]" aria-hidden="true" />
+                  <p className="text-xs text-[#6b4334] mb-2 font-medium flex items-center gap-1.5">
+                    <Newspaper className="w-3.5 h-3.5 text-[#c2410c]" aria-hidden="true" />
                     <span>{post.date}</span>
                   </p>
-                  <h2 className="text-xl font-bold text-[#1a2e1a] mb-3 leading-snug">
+                  <h2 className="text-xl font-bold text-[#3b1508] mb-3 leading-snug">
                     <Link
                       href={`/news/${post.slug}/`}
-                      className="hover:text-[#2d6a4f] transition"
+                      className="hover:text-[#6b2410] transition"
                     >
                       {post.title}
                     </Link>
                   </h2>
-                  <p className="text-sm text-[#4a5568] leading-relaxed flex-1">
+                  <p className="text-sm text-[#6b4334] leading-relaxed flex-1">
                     {post.excerpt}
                   </p>
                   <Link
                     href={`/news/${post.slug}/`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2d6a4f] hover:text-[#40916c] mt-5"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#6b2410] hover:text-[#c2410c] mt-5"
                   >
                     <span>Read Full Update</span>
                     <ArrowRight className="w-4 h-4" aria-hidden="true" />

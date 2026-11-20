@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MapPin, Mail, Phone, ExternalLink } from "lucide-react";
 import {
   CONTACT_DETAILS,
+  FEST_HASHTAGS,
   FOOTER_EVENT_LINKS,
   FOOTER_QUICK_LINKS,
   SITE_CONFIG,
@@ -22,7 +23,7 @@ export default function Footer() {
     Boolean(CONTACT_DETAILS.whatsapp.trim());
 
   return (
-    <footer className="bg-[#0d1f12] text-white/75 pt-[72px] pb-8">
+    <footer className="bg-[#2a0e05] text-white/75 pt-[72px] pb-8">
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1fr] gap-12 pb-12">
           {/* Brand Column */}
@@ -40,7 +41,7 @@ export default function Footer() {
             <p className="text-sm text-white/75 leading-relaxed mb-3 max-w-xs">
               {SITE_CONFIG.tagline}.
             </p>
-            <p className="text-xs text-[#74c69d] font-medium flex items-start gap-2 mb-5">
+            <p className="text-xs text-[#f7a21b] font-medium flex items-start gap-2 mb-5">
               <MapPin className="w-4 h-4 shrink-0 mt-0.5" aria-hidden="true" />
               <span>
                 {SITE_CONFIG.eventDateDisplay} | {SITE_CONFIG.venue}, Elgeyo Marakwet County, Kenya.
@@ -59,7 +60,7 @@ export default function Footer() {
                       href={s.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-[10px] bg-white/10 hover:bg-[#2d6a4f] text-white text-xs font-medium transition"
+                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-[10px] bg-white/10 hover:bg-[#6b2410] text-white text-xs font-medium transition"
                     >
                       {s.label}
                       <ExternalLink className="w-3 h-3" aria-hidden="true" />
@@ -76,7 +77,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#74c69d] mb-5">
+            <h4 className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#f7a21b] mb-5">
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -84,7 +85,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/65 hover:text-[#74c69d] transition"
+                    className="text-white/65 hover:text-[#f7a21b] transition"
                   >
                     {link.label}
                   </Link>
@@ -95,7 +96,7 @@ export default function Footer() {
 
           {/* Festival Info */}
           <div>
-            <h4 className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#74c69d] mb-5">
+            <h4 className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#f7a21b] mb-5">
               Festival &amp; Updates
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -103,7 +104,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/65 hover:text-[#74c69d] transition"
+                    className="text-white/65 hover:text-[#f7a21b] transition"
                   >
                     {link.label}
                   </Link>
@@ -114,21 +115,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#74c69d] mb-5">
+            <h4 className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#f7a21b] mb-5">
               Contact Us
             </h4>
             <div className="space-y-3 text-sm text-white/65">
               <p className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#74c69d] shrink-0 mt-1" aria-hidden="true" />
+                <MapPin className="w-4 h-4 text-[#f7a21b] shrink-0 mt-1" aria-hidden="true" />
                 <span>{SITE_CONFIG.fullVenue}</span>
               </p>
 
               {CONTACT_DETAILS.email.trim() && (
                 <p className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-[#74c69d] shrink-0" aria-hidden="true" />
+                  <Mail className="w-4 h-4 text-[#f7a21b] shrink-0" aria-hidden="true" />
                   <a
                     href={`mailto:${CONTACT_DETAILS.email}`}
-                    className="hover:text-[#74c69d] transition break-all"
+                    className="hover:text-[#f7a21b] transition break-all"
                   >
                     {CONTACT_DETAILS.email}
                   </a>
@@ -137,10 +138,10 @@ export default function Footer() {
 
               {CONTACT_DETAILS.phone.trim() && (
                 <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-[#74c69d] shrink-0" aria-hidden="true" />
+                  <Phone className="w-4 h-4 text-[#f7a21b] shrink-0" aria-hidden="true" />
                   <a
                     href={`tel:${CONTACT_DETAILS.phone}`}
-                    className="hover:text-[#74c69d] transition"
+                    className="hover:text-[#f7a21b] transition"
                   >
                     {CONTACT_DETAILS.phone}
                   </a>
@@ -150,7 +151,7 @@ export default function Footer() {
               {!hasDirectContact && (
                 <p className="text-xs text-white/50">
                   Official email, phone &amp; WhatsApp details to be added when available.{" "}
-                  <Link href="/contact/" className="text-[#74c69d] underline">
+                  <Link href="/contact/" className="text-[#f7a21b] underline">
                     Send an enquiry
                   </Link>
                 </p>
@@ -159,7 +160,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/45">
+        <p className="hashtags text-center text-[11px] sm:text-xs text-[#f7a21b] border-t border-white/10 pt-6 pb-4 break-words">
+          {FEST_HASHTAGS.join(" ")}
+        </p>
+
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/45">
           <p>{SITE_CONFIG.copyright}</p>
           <p className="text-white/35 text-center sm:text-right">
             Photography via Wikimedia Commons (CC-BY / CC-BY-SA) — see{" "}

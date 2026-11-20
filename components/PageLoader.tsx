@@ -41,12 +41,12 @@ function PageLoaderOverlay() {
     <div
       aria-live="polite"
       aria-label="Loading page"
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-[#0d1f12] select-none transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-[#2a0e05] select-none transition-opacity duration-500 ${
         fading ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
       <div className="preloader-grid pointer-events-none absolute inset-0 opacity-20" />
-      <div className="pointer-events-none absolute size-96 rounded-full bg-gradient-to-tr from-[#52b788]/20 via-[#d4a34a]/20 to-[#95d5b2]/20 blur-3xl animate-preloader-glow" />
+      <div className="pointer-events-none absolute size-96 rounded-full bg-gradient-to-tr from-[#d9480f]/20 via-[#f7a21b]/20 to-[#f5c27a]/20 blur-3xl animate-preloader-glow" />
 
       <div className="relative flex flex-col items-center text-center px-4">
         <div className="relative mb-6 flex size-24 items-center justify-center sm:size-28">
@@ -55,7 +55,7 @@ function PageLoaderOverlay() {
             className="absolute -inset-2.5 rounded-full opacity-75 blur-md animate-spin [animation-duration:2.8s]"
             style={{
               background:
-                "conic-gradient(from 0deg, #52b788 0%, #d4a34a 33.33%, #95d5b2 66.66%, #52b788 100%)",
+                "conic-gradient(from 0deg, #d9480f 0%, #f7a21b 33.33%, #f5c27a 66.66%, #d9480f 100%)",
             }}
           />
 
@@ -64,7 +64,7 @@ function PageLoaderOverlay() {
             className="absolute -inset-1 rounded-full p-[2.5px] animate-spin [animation-duration:2s]"
             style={{
               background:
-                "conic-gradient(from 0deg, #52b788 0%, #d4a34a 33.33%, #95d5b2 66.66%, #52b788 100%)",
+                "conic-gradient(from 0deg, #d9480f 0%, #f7a21b 33.33%, #f5c27a 66.66%, #d9480f 100%)",
               WebkitMask:
                 "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
               WebkitMaskComposite: "xor",
@@ -83,7 +83,7 @@ function PageLoaderOverlay() {
               cy="50"
               r="45"
               fill="none"
-              stroke="#52b788"
+              stroke="#d9480f"
               strokeWidth="2.5"
               strokeDasharray="42 180"
               strokeLinecap="round"
@@ -94,7 +94,7 @@ function PageLoaderOverlay() {
               cy="50"
               r="45"
               fill="none"
-              stroke="#d4a34a"
+              stroke="#f7a21b"
               strokeWidth="2.5"
               strokeDasharray="42 180"
               strokeDashoffset="-75"
@@ -106,7 +106,7 @@ function PageLoaderOverlay() {
               cy="50"
               r="45"
               fill="none"
-              stroke="#95d5b2"
+              stroke="#f5c27a"
               strokeWidth="2.5"
               strokeDasharray="42 180"
               strokeDashoffset="-150"
@@ -116,7 +116,7 @@ function PageLoaderOverlay() {
           </svg>
 
           {/* Inner circular logo badge */}
-          <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-[#0d1f12]/90 p-3 shadow-inner ring-1 ring-white/15 backdrop-blur-md sm:size-24">
+          <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-[#2a0e05]/90 p-3 shadow-inner ring-1 ring-white/15 backdrop-blur-md sm:size-24">
             <img
               src={SITE_IMAGES.logo}
               alt={`${SITE_CONFIG.name} Logo`}
@@ -125,7 +125,7 @@ function PageLoaderOverlay() {
           </div>
         </div>
 
-        <p className="font-serif-heading text-xl font-bold tracking-[0.22em] text-[#74c69d] sm:text-2xl">
+        <p className="font-serif-heading text-xl font-bold tracking-[0.22em] text-[#f7a21b] sm:text-2xl">
           KEIYO CULTURAL FEST
         </p>
         <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/75 sm:text-xs">

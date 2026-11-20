@@ -39,37 +39,37 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <div className="section-label mb-3">Official Event</div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#1a2e1a]">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#3b1508]">
                   {SITE_CONFIG.name}
                 </h2>
                 <div className="divider" />
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#d8f3dc] shadow-sm">
-                  <div className="w-11 h-11 rounded-xl bg-[#d8f3dc] text-[#2d6a4f] flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#f6dcb8] shadow-sm">
+                  <div className="w-11 h-11 rounded-xl bg-[#f6dcb8] text-[#6b2410] flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#1a2e1a] text-base">Venue</h3>
-                    <p className="text-sm text-[#4a5568] mt-0.5">
+                    <h3 className="font-bold text-[#3b1508] text-base">Venue</h3>
+                    <p className="text-sm text-[#6b4334] mt-0.5">
                       {SITE_CONFIG.fullVenue}
                     </p>
                   </div>
                 </div>
 
                 {CONTACT_DETAILS.email.trim() && (
-                  <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#d8f3dc] shadow-sm">
-                    <div className="w-11 h-11 rounded-xl bg-[#d8f3dc] text-[#2d6a4f] flex items-center justify-center shrink-0">
+                  <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#f6dcb8] shadow-sm">
+                    <div className="w-11 h-11 rounded-xl bg-[#f6dcb8] text-[#6b2410] flex items-center justify-center shrink-0">
                       <Mail className="w-5 h-5" aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#1a2e1a] text-base">
+                      <h3 className="font-bold text-[#3b1508] text-base">
                         Official Email
                       </h3>
                       <a
                         href={`mailto:${CONTACT_DETAILS.email}`}
-                        className="text-sm text-[#2d6a4f] hover:underline"
+                        className="text-sm text-[#6b2410] hover:underline"
                       >
                         {CONTACT_DETAILS.email}
                       </a>
@@ -78,17 +78,17 @@ export default function ContactPage() {
                 )}
 
                 {CONTACT_DETAILS.phone.trim() && (
-                  <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#d8f3dc] shadow-sm">
-                    <div className="w-11 h-11 rounded-xl bg-[#d8f3dc] text-[#2d6a4f] flex items-center justify-center shrink-0">
+                  <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#f6dcb8] shadow-sm">
+                    <div className="w-11 h-11 rounded-xl bg-[#f6dcb8] text-[#6b2410] flex items-center justify-center shrink-0">
                       <Phone className="w-5 h-5" aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#1a2e1a] text-base">
+                      <h3 className="font-bold text-[#3b1508] text-base">
                         Event Telephone
                       </h3>
                       <a
                         href={`tel:${CONTACT_DETAILS.phone}`}
-                        className="text-sm text-[#2d6a4f] hover:underline"
+                        className="text-sm text-[#6b2410] hover:underline"
                       >
                         {CONTACT_DETAILS.phone}
                       </a>
@@ -97,19 +97,19 @@ export default function ContactPage() {
                 )}
 
                 {CONTACT_DETAILS.whatsapp.trim() && (
-                  <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#d8f3dc] shadow-sm">
-                    <div className="w-11 h-11 rounded-xl bg-[#d8f3dc] text-[#2d6a4f] flex items-center justify-center shrink-0">
+                  <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-[#f6dcb8] shadow-sm">
+                    <div className="w-11 h-11 rounded-xl bg-[#f6dcb8] text-[#6b2410] flex items-center justify-center shrink-0">
                       <MessageCircle className="w-5 h-5" aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#1a2e1a] text-base">
+                      <h3 className="font-bold text-[#3b1508] text-base">
                         WhatsApp Contact
                       </h3>
                       <a
                         href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/\D/g, "")}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-[#2d6a4f] hover:underline inline-flex items-center gap-1"
+                        className="text-sm text-[#6b2410] hover:underline inline-flex items-center gap-1"
                       >
                         <span>Chat on WhatsApp</span>
                         <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
@@ -121,14 +121,14 @@ export default function ContactPage() {
                 {!CONTACT_DETAILS.email.trim() &&
                   !CONTACT_DETAILS.phone.trim() &&
                   !CONTACT_DETAILS.whatsapp.trim() && (
-                    <div className="bg-white/80 p-5 rounded-2xl border border-dashed border-[#95d5b2] text-sm text-[#4a5568]">
+                    <div className="bg-white/80 p-5 rounded-2xl border border-dashed border-[#f5c27a] text-sm text-[#6b4334]">
                       Official email address, event telephone number, WhatsApp contact, and social media links will be added here once confirmed.
                     </div>
                   )}
 
                 {socialLinks.length > 0 && (
-                  <div className="bg-white p-5 rounded-2xl border border-[#d8f3dc] shadow-sm">
-                    <h3 className="font-bold text-[#1a2e1a] text-base mb-3">
+                  <div className="bg-white p-5 rounded-2xl border border-[#f6dcb8] shadow-sm">
+                    <h3 className="font-bold text-[#3b1508] text-base mb-3">
                       Social Media
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -151,9 +151,9 @@ export default function ContactPage() {
             </div>
 
             {/* Enquiry Form */}
-            <div className="bg-white rounded-[20px] p-8 sm:p-10 shadow-md border border-[#d8f3dc]">
+            <div className="bg-white rounded-[20px] p-8 sm:p-10 shadow-md border border-[#f6dcb8]">
               <div className="section-label mb-2">Enquiry Form</div>
-              <h2 className="text-2xl font-bold text-[#1a2e1a] mb-6">
+              <h2 className="text-2xl font-bold text-[#3b1508] mb-6">
                 Send Us a Message
               </h2>
 
@@ -210,10 +210,10 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
               <div className="section-label mb-2">Venue &amp; Directions</div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1a2e1a]">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#3b1508]">
                 {EVENT_DATA.map.title}
               </h2>
-              <p className="text-[#4a5568] mt-1">{EVENT_DATA.map.subtitle}</p>
+              <p className="text-[#6b4334] mt-1">{EVENT_DATA.map.subtitle}</p>
             </div>
             <a
               href={EVENT_DATA.map.directionsUrl}
@@ -226,7 +226,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div className="rounded-[24px] overflow-hidden shadow-lg border border-[#d8f3dc] h-[360px] bg-[#f0faf4]">
+          <div className="rounded-[24px] overflow-hidden shadow-lg border border-[#f6dcb8] h-[360px] bg-[#fdf3e1]">
             <iframe
               title="Map showing Buffalo Safaris – Kolol, Iten–Kabarnet Road"
               src={EVENT_DATA.map.embedUrl}
@@ -239,11 +239,11 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section bg-[#f0faf4]" id="faq">
+      <section className="section bg-[#fdf3e1]" id="faq">
         <div className="container-site max-w-4xl">
           <div className="text-center mb-12">
             <div className="section-label mb-3">Frequently Asked Questions</div>
-            <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#1a2e1a]">
+            <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#3b1508]">
               Frequently Asked Questions
             </h2>
           </div>

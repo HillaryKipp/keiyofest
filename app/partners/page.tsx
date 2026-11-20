@@ -31,7 +31,7 @@ export default function PartnersPage() {
               <div className="section-label mb-3">
                 {PARTNERS_DATA.whyPartner.eyebrow}
               </div>
-              <h2 className="text-[clamp(28px,3.5vw,40px)] font-bold text-[#1a2e1a] leading-tight">
+              <h2 className="text-[clamp(28px,3.5vw,40px)] font-bold text-[#3b1508] leading-tight">
                 {PARTNERS_DATA.whyPartner.heading}
               </h2>
               <div className="divider" />
@@ -40,10 +40,10 @@ export default function PartnersPage() {
                 {PARTNERS_DATA.whyPartner.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-[#1a2e1a] text-base"
+                    className="flex items-start gap-3 text-[#3b1508] text-base"
                   >
                     <CheckCircle2
-                      className="w-5 h-5 text-[#2d6a4f] shrink-0 mt-0.5"
+                      className="w-5 h-5 text-[#6b2410] shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
                     <span>{item}</span>
@@ -72,16 +72,16 @@ export default function PartnersPage() {
 
             <div
               id="sponsorship-form"
-              className="bg-white rounded-[20px] p-8 sm:p-10 shadow-md border border-[#d8f3dc]"
+              className="bg-white rounded-[20px] p-8 sm:p-10 shadow-md border border-[#f6dcb8]"
             >
               <div className="flex items-center gap-3 mb-2">
                 <HeartHandshake
-                  className="w-6 h-6 text-[#2d6a4f]"
+                  className="w-6 h-6 text-[#6b2410]"
                   aria-hidden="true"
                 />
                 <span className="section-label">Sponsorship Enquiry</span>
               </div>
-              <h3 className="text-2xl font-bold text-[#1a2e1a] mb-6">
+              <h3 className="text-2xl font-bold text-[#3b1508] mb-6">
                 Become a Sponsor or Partner
               </h3>
 
@@ -151,14 +151,14 @@ export default function PartnersPage() {
         <div className="container-site space-y-14">
           {PARTNERS_DATA.groups.map((group) => (
             <div key={group.id}>
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-3 border-b border-[#d8f3dc]">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-3 border-b border-[#f6dcb8]">
                 <div className="flex items-center gap-2.5">
-                  <Award className="w-5 h-5 text-[#2d6a4f]" aria-hidden="true" />
-                  <h2 className="text-2xl font-bold text-[#1a2e1a]">
+                  <Award className="w-5 h-5 text-[#6b2410]" aria-hidden="true" />
+                  <h2 className="text-2xl font-bold text-[#3b1508]">
                     {group.title}
                   </h2>
                 </div>
-                <span className="text-xs font-medium text-[#4a5568]">
+                <span className="text-xs font-medium text-[#6b4334]">
                   {group.description}
                 </span>
               </div>
@@ -167,7 +167,7 @@ export default function PartnersPage() {
                 {group.slots.map((slot) => (
                   <div
                     key={slot.name}
-                    className="h-28 rounded-2xl border-2 border-dashed border-[#d8f3dc] bg-[#f0faf4]/50 flex items-center justify-center p-4 text-center"
+                    className="h-28 rounded-2xl border-2 border-dashed border-[#f6dcb8] bg-[#fdf3e1]/50 flex items-center justify-center p-4 text-center"
                   >
                     {slot.logo ? (
                       <img
@@ -176,7 +176,7 @@ export default function PartnersPage() {
                         className="max-h-16 w-auto object-contain"
                       />
                     ) : (
-                      <span className="text-xs font-semibold text-[#4a5568]">
+                      <span className="text-xs font-semibold text-[#6b4334]">
                         {group.description}
                       </span>
                     )}

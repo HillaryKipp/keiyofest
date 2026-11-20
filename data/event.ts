@@ -3,14 +3,14 @@ import { SITE_IMAGES } from "./site";
 export const EVENT_DATA = {
   hero: {
     eyebrow: "Event Information",
-    title: "Join Us on 24th December 2026",
-    subtitle: "Celebrating Our Heritage, Preserving Our Identity and Promoting Unity.",
+    title: "Join Us on 23rd December 2026",
+    subtitle: "Our Culture, Our Pride, Our Unity.",
     image: SITE_IMAGES.hero.src,
     imageAlt: SITE_IMAGES.hero.alt,
   },
   details: {
     event: "KEIYO CULTURAL FEST 2026",
-    date: "Thursday, 24th December 2026",
+    date: "Wednesday, 23rd December 2026",
     venue: "Buffalo Safaris – Kolol",
     location: "Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya.",
     eventType: "Annual Cultural Celebration",

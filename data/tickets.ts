@@ -28,48 +28,36 @@ export const TICKETS_DATA = {
     {
       id: "early-bird-regular",
       name: "Early Bird Regular",
-      price: "", // PLACEHOLDER: e.g. "KES 1,000"
+      price: "KES 1,499",
       badge: "Early Bird",
       benefits: [
         "Full-day general admission to KEIYO CULTURAL FEST 2026",
-        "Access to traditional dances, music and live entertainment",
-        "Access to cultural exhibitions and heritage showcases",
+        "Live Kalenjin music performances & traditional dances",
+        "Access to Keiyo cultural artifacts, art & crafts exhibitions",
         "Electronic ticket confirmation upon booking",
       ],
     },
     {
       id: "early-bird-vip",
       name: "Early Bird VIP",
-      price: "", // PLACEHOLDER: e.g. "KES 3,000"
-      badge: "Best Value",
+      price: "KES 4,440",
+      badge: "VIP",
       highlighted: true,
       benefits: [
         "Priority VIP seating and reserved viewing area",
-        "Full access to traditional dances, music and exhibitions",
+        "Full access to performances, dances, exhibitions & seminars",
         "Dedicated VIP hospitality and networking access",
         "Electronic ticket confirmation upon booking",
       ],
     },
     {
-      id: "standard-general",
-      name: "Standard / General Admission",
-      price: "", // PLACEHOLDER: e.g. "KES 1,500"
+      id: "standard",
+      name: "Standard",
+      price: "KES 1,550",
       benefits: [
-        "Full-day general admission on 24th December 2026",
-        "Access to cultural performances, cuisine & exhibition grounds",
-        "Access to community networking spaces",
-        "Electronic ticket confirmation upon booking",
-      ],
-    },
-    {
-      id: "vip-admission",
-      name: "VIP Admission",
-      price: "", // PLACEHOLDER: e.g. "KES 4,000"
-      badge: "VIP",
-      benefits: [
-        "Priority VIP seating and dedicated hospitality zone",
-        "Full access to all performances, exhibitions and showcases",
-        "Executive networking with leaders, artists & partners",
+        "Full-day general admission on 23rd December 2026",
+        "Access to Mursik & local cuisine and exhibition grounds",
+        "Access to leadership seminars & community discussions",
         "Electronic ticket confirmation upon booking",
       ],
     },

@@ -48,23 +48,23 @@ export default async function NewsDetailPage({
 
       <article className="section bg-white">
         <div className="container-site max-w-3xl">
-          <div className="flex items-center gap-2 text-sm text-[#4a5568] mb-8 pb-5 border-b border-[#d8f3dc]">
-            <Calendar className="w-4 h-4 text-[#2d6a4f]" aria-hidden="true" />
+          <div className="flex items-center gap-2 text-sm text-[#6b4334] mb-8 pb-5 border-b border-[#f6dcb8]">
+            <Calendar className="w-4 h-4 text-[#6b2410]" aria-hidden="true" />
             <span>{post.date}</span>
             <span>•</span>
-            <span className="text-[#2d6a4f] font-semibold">{post.category}</span>
+            <span className="text-[#6b2410] font-semibold">{post.category}</span>
           </div>
 
-          <div className="space-y-5 text-[#1a2e1a] text-base sm:text-lg leading-[1.85]">
+          <div className="space-y-5 text-[#3b1508] text-base sm:text-lg leading-[1.85]">
             {post.content.map((para, i) => (
               <p key={i}>{para}</p>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-[#d8f3dc] flex flex-wrap items-center justify-between gap-4">
+          <div className="mt-12 pt-8 border-t border-[#f6dcb8] flex flex-wrap items-center justify-between gap-4">
             <Link
               href="/news/"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#2d6a4f] hover:text-[#40916c]"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#6b2410] hover:text-[#c2410c]"
             >
               <ArrowLeft className="w-4 h-4" aria-hidden="true" />
               <span>Back to All News &amp; Updates</span>

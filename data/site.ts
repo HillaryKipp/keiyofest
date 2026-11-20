@@ -1,11 +1,11 @@
 export const SITE_CONFIG = {
   name: "KEIYO CULTURAL FEST 2026",
   shortName: "KEIYO FEST",
-  tagline: "Celebrating Our Heritage, Identity and Unity",
-  theme: "Celebrating Our Heritage, Preserving Our Identity and Promoting Unity.",
-  eventDateDisplay: "24th December 2026",
-  eventDateFull: "Thursday, 24th December 2026",
-  eventDateISO: "2026-12-24T09:00:00+03:00",
+  tagline: "Our Culture, Our Pride, Our Unity",
+  theme: "Our Culture, Our Pride, Our Unity.",
+  eventDateDisplay: "23rd December 2026",
+  eventDateFull: "Wednesday, 23rd December 2026",
+  eventDateISO: "2026-12-23T09:00:00+03:00",
   eventType: "Annual Cultural Celebration",
   venue: "Buffalo Safaris – Kolol",
   location: "Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya",
@@ -15,12 +15,41 @@ export const SITE_CONFIG = {
   formEndpoint: process.env.NEXT_PUBLIC_FORM_ENDPOINT || "",
 };
 
+/** Event date parts, as displayed on the official poster */
+export const EVENT_DATE_PARTS = {
+  weekday: "WED",
+  day: "23",
+  daySuffix: "RD",
+  month: "DEC",
+  year: "2026",
+};
+
+/** Official festival activities (from the event poster) */
+export const FEST_ACTIVITIES: string[] = [
+  "Live Kalenjin Music Performance",
+  "Traditional Dances",
+  "Mursik & Local Cuisine",
+  "Keiyo Cultural Artifacts",
+  "Environment Conservation",
+  "Art & Crafts",
+  "Leadership Seminars",
+  "Community Discussions",
+];
+
+export const FEST_HASHTAGS: string[] = [
+  "#KEIYOCULTUREFEST",
+  "#HERITAGE",
+  "#KEIYO",
+  "#CULTURALEXCHANGE",
+  "#UNITY",
+];
+
 /**
  * Contact details & social links.
  * Leave values empty ("") until confirmed; any empty link is automatically hidden in the UI.
  */
 export const CONTACT_DETAILS = {
-  email: "", // PLACEHOLDER: e.g. "info@keiyoculturalfest.co.ke"
+  email: "keiyoculturalfest@gmail.com",
   phone: "", // PLACEHOLDER: e.g. "+254 700 000 000"
   whatsapp: "", // PLACEHOLDER: digits with country code, e.g. "254700000000"
   socials: {

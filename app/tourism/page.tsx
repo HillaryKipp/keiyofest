@@ -30,21 +30,21 @@ export default function TourismPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="reveal-left">
               <div className="section-label mb-3">{TOURISM_DATA.rimoi.eyebrow}</div>
-              <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#1a2e1a] leading-tight">
+              <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#3b1508] leading-tight">
                 {TOURISM_DATA.rimoi.heading}
               </h2>
               <div className="divider" />
-              <div className="space-y-4 text-[#4a5568] text-[16px] sm:text-[17px] leading-[1.8]">
+              <div className="space-y-4 text-[#6b4334] text-[16px] sm:text-[17px] leading-[1.8]">
                 {TOURISM_DATA.rimoi.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
               </div>
 
-              <div className="mt-6 p-5 rounded-xl bg-[#f0faf4] border-l-4 border-[#52b788] text-[#1a2e1a] font-serif-heading italic text-lg">
+              <div className="mt-6 p-5 rounded-xl bg-[#fdf3e1] border-l-4 border-[#d9480f] text-[#3b1508] font-serif-heading italic text-lg">
                 &ldquo;{TOURISM_DATA.rimoi.motto}&rdquo;
               </div>
 
-              <p className="text-sm text-[#4a5568] mt-5">
+              <p className="text-sm text-[#6b4334] mt-5">
                 {TOURISM_DATA.rimoi.note}
               </p>
             </div>
@@ -71,12 +71,12 @@ export default function TourismPage() {
               const Icon = Icons[idx] || Compass;
               return (
                 <div key={item.title} className="prog-card">
-                  <Icon className="w-8 h-8 text-[#40916c] mb-4" aria-hidden="true" />
+                  <Icon className="w-8 h-8 text-[#c2410c] mb-4" aria-hidden="true" />
                   <div className="section-label mb-2">{item.tag}</div>
-                  <h3 className="text-xl font-bold text-[#1a2e1a] mb-3">
+                  <h3 className="text-xl font-bold text-[#3b1508] mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-[#4a5568] leading-relaxed">
+                  <p className="text-sm text-[#6b4334] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -96,7 +96,7 @@ export default function TourismPage() {
           className="absolute inset-0 w-full h-full object-cover opacity-10"
         />
         <div className="container-site relative z-10 max-w-2xl">
-          <MapPin className="w-9 h-9 text-[#e8c06a] mx-auto mb-4" aria-hidden="true" />
+          <MapPin className="w-9 h-9 text-[#fbbf3c] mx-auto mb-4" aria-hidden="true" />
           <h2 className="text-[clamp(28px,3.8vw,44px)] font-bold mb-4">
             Plan Your Cultural &amp; Wildlife Trip
           </h2>

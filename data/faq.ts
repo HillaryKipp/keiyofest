@@ -6,7 +6,7 @@ export interface FaqItem {
 export const FAQ_DATA: FaqItem[] = [
   {
     question: "When is KEIYO CULTURAL FEST 2026?",
-    answer: "The event will take place on 24th December 2026.",
+    answer: "The event will take place on Wednesday, 23rd December 2026.",
   },
   {
     question: "Where will the event be held?",
@@ -21,7 +21,12 @@ export const FAQ_DATA: FaqItem[] = [
   {
     question: "Will there be traditional food and entertainment?",
     answer:
-      "Yes. The Fest will feature traditional cuisine, cultural dances, music, exhibitions and entertainment.",
+      "Yes. Activities include live Kalenjin music performances, traditional dances, Mursik & local cuisine, Keiyo cultural artifacts, environment conservation, art & crafts, leadership seminars and community discussions.",
+  },
+  {
+    question: "How much are tickets?",
+    answer:
+      "Early Bird Regular: KES 1,499 • Early Bird VIP: KES 4,440 • Standard: KES 1,550.",
   },
   {
     question: "Will there be tourism excursions?",

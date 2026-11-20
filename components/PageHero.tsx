@@ -19,7 +19,7 @@ export default function PageHero({
   imageAlt,
 }: PageHeroProps) {
   return (
-    <section className="relative min-h-[420px] sm:min-h-[480px] flex items-end pt-32 pb-16 overflow-hidden bg-[#0d1f12]">
+    <section className="relative min-h-[420px] sm:min-h-[480px] flex items-end pt-32 pb-16 overflow-hidden bg-[#2a0e05]">
       <img
         src={image}
         alt={imageAlt}
@@ -32,11 +32,11 @@ export default function PageHero({
           aria-label="Breadcrumb"
           className="flex items-center gap-2 text-xs font-medium text-white/70 mb-5"
         >
-          <Link href="/" className="hover:text-[#74c69d] transition">
+          <Link href="/" className="hover:text-[#f7a21b] transition">
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-white/50" aria-hidden="true" />
-          <span className="text-[#74c69d]">{breadcrumbLabel}</span>
+          <span className="text-[#f7a21b]">{breadcrumbLabel}</span>
         </nav>
 
         <div className="section-label section-label-light mb-3">{eyebrow}</div>

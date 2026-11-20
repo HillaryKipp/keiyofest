@@ -102,19 +102,21 @@ export default function StaticForm({
       `${formTitle} — ${SITE_CONFIG.name}\n\n${summaryLines}`
     );
 
+    if (CONTACT_DETAILS.email.trim()) {
+      const subj = encodeURIComponent(`${formTitle} — ${SITE_CONFIG.name}`);
+      window.location.href = `mailto:${CONTACT_DETAILS.email}?subject=${subj}&body=${encodedBody}`;
+      setStatus("success");
+      setStatusMessage(
+        `Your email client has been opened to send your submission to ${CONTACT_DETAILS.email}.`
+      );
+      return;
+    }
+
     if (CONTACT_DETAILS.whatsapp.trim()) {
       const waDigits = CONTACT_DETAILS.whatsapp.replace(/\D/g, "");
       window.open(`https://wa.me/${waDigits}?text=${encodedBody}`, "_blank", "noopener,noreferrer");
       setStatus("success");
       setStatusMessage("WhatsApp opened with your prefilled message.");
-      return;
-    }
-
-    if (CONTACT_DETAILS.email.trim()) {
-      const subj = encodeURIComponent(`${formTitle} — ${SITE_CONFIG.name}`);
-      window.location.href = `mailto:${CONTACT_DETAILS.email}?subject=${subj}&body=${encodedBody}`;
-      setStatus("success");
-      setStatusMessage("Your email client has been opened with your prefilled enquiry.");
       return;
     }
 
@@ -140,9 +142,9 @@ export default function StaticForm({
       {status === "success" && (
         <div
           role="status"
-          className="flex items-start gap-2.5 p-4 rounded-xl bg-[#f0faf4] border border-[#95d5b2] text-[#1a2e1a] text-sm"
+          className="flex items-start gap-2.5 p-4 rounded-xl bg-[#fdf3e1] border border-[#f5c27a] text-[#3b1508] text-sm"
         >
-          <CheckCircle2 className="w-5 h-5 text-[#2d6a4f] shrink-0 mt-0.5" aria-hidden="true" />
+          <CheckCircle2 className="w-5 h-5 text-[#6b2410] shrink-0 mt-0.5" aria-hidden="true" />
           <span>{statusMessage}</span>
         </div>
       )}
@@ -166,10 +168,10 @@ export default function StaticForm({
             <div key={field.name} className={isFullWidth ? "sm:col-span-2" : ""}>
               <label
                 htmlFor={id}
-                className="block text-sm font-semibold text-[#1a2e1a] mb-1.5"
+                className="block text-sm font-semibold text-[#3b1508] mb-1.5"
               >
                 {field.label}{" "}
-                {field.required && <span className="text-[#d4a34a]">*</span>}
+                {field.required && <span className="text-[#f7a21b]">*</span>}
               </label>
 
               {field.type === "textarea" ? (

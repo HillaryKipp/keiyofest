@@ -17,7 +17,7 @@ export default function FaqAccordion() {
         return (
           <div
             key={item.question}
-            className="bg-white border border-[#d8f3dc] rounded-2xl overflow-hidden shadow-sm transition hover:border-[#95d5b2]"
+            className="bg-white border border-[#f6dcb8] rounded-2xl overflow-hidden shadow-sm transition hover:border-[#f5c27a]"
           >
             <button
               id={buttonId}
@@ -25,11 +25,11 @@ export default function FaqAccordion() {
               aria-expanded={isOpen}
               aria-controls={panelId}
               onClick={() => setOpenIndex(isOpen ? null : idx)}
-              className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-serif-heading text-lg sm:text-xl font-semibold text-[#1a2e1a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#40916c]"
+              className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-serif-heading text-lg sm:text-xl font-semibold text-[#3b1508] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c2410c]"
             >
               <span>{item.question}</span>
               <ChevronDown
-                className={`w-5 h-5 text-[#2d6a4f] shrink-0 transition-transform duration-300 ${
+                className={`w-5 h-5 text-[#6b2410] shrink-0 transition-transform duration-300 ${
                   isOpen ? "rotate-180" : ""
                 }`}
                 aria-hidden="true"
@@ -44,7 +44,7 @@ export default function FaqAccordion() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-6 pb-5 text-[#4a5568] leading-relaxed text-[15px] sm:text-base border-t border-[#f0faf4] pt-4">
+                <p className="px-6 pb-5 text-[#6b4334] leading-relaxed text-[15px] sm:text-base border-t border-[#fdf3e1] pt-4">
                   {item.answer}
                 </p>
               </div>

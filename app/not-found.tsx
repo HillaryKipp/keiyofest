@@ -3,9 +3,9 @@ import { ArrowLeft, Compass } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-[#0d1f12] text-white pt-28 pb-20 px-6 text-center">
+    <section className="min-h-[80vh] flex items-center justify-center bg-[#2a0e05] text-white pt-28 pb-20 px-6 text-center">
       <div className="max-w-xl">
-        <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#e8c06a] flex items-center justify-center mx-auto mb-6">
+        <div className="w-16 h-16 rounded-2xl bg-white/10 text-[#fbbf3c] flex items-center justify-center mx-auto mb-6">
           <Compass className="w-8 h-8" aria-hidden="true" />
         </div>
         <div className="section-label section-label-light justify-center mb-3">

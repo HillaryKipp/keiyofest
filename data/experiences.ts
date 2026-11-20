@@ -11,7 +11,7 @@ export const EXPERIENCES_DATA = {
   },
   intro: {
     eyebrow: "Programme Pillars",
-    heading: "What Awaits You on 24th December 2026",
+    heading: "What Awaits You on 23rd December 2026",
     description:
       "From ancestral rhythms and traditional Mursik to cultural fashion showcases and community networking, every element of KEIYO CULTURAL FEST 2026 is designed to honour our heritage.",
   },

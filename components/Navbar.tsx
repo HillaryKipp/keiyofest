@@ -38,7 +38,7 @@ export default function Navbar() {
         <div className="navbar-inner">
           <Link
             href="/"
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#74c69d] rounded-lg"
+            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f7a21b] rounded-lg"
             aria-label={SITE_CONFIG.name}
           >
             <img

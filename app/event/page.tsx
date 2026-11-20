@@ -4,11 +4,12 @@ import { Calendar, CheckCircle2, ExternalLink, MapPin, Shirt, Users } from "luci
 import PageHero from "@/components/PageHero";
 import CountdownTimer from "@/components/CountdownTimer";
 import { EVENT_DATA } from "@/data/event";
+import { FEST_ACTIVITIES } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Event Information",
   description:
-    "Join us on Thursday, 24th December 2026 at Buffalo Safaris – Kolol, Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya for KEIYO CULTURAL FEST 2026.",
+    "Join us on Wednesday, 23rd December 2026 at Buffalo Safaris – Kolol, Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya for KEIYO CULTURAL FEST 2026.",
   alternates: { canonical: "/event/" },
 };
 
@@ -28,46 +29,46 @@ export default function EventPage() {
       <section className="section bg-[var(--cream)]">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="bg-white rounded-[24px] p-8 sm:p-10 shadow-md border border-[#d8f3dc]">
+            <div className="bg-white rounded-[24px] p-8 sm:p-10 shadow-md border border-[#f6dcb8]">
               <div className="section-label mb-3">Official Event Details</div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1a2e1a] mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#3b1508] mb-6">
                 {EVENT_DATA.details.event}
               </h2>
 
               <dl className="space-y-5 text-sm sm:text-base">
-                <div className="flex items-start gap-3 pb-4 border-b border-[#f0faf4]">
-                  <Calendar className="w-5 h-5 text-[#2d6a4f] shrink-0 mt-0.5" aria-hidden="true" />
+                <div className="flex items-start gap-3 pb-4 border-b border-[#fdf3e1]">
+                  <Calendar className="w-5 h-5 text-[#6b2410] shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <dt className="font-bold text-[#1a2e1a]">Date</dt>
-                    <dd className="text-[#4a5568]">{EVENT_DATA.details.date}</dd>
+                    <dt className="font-bold text-[#3b1508]">Date</dt>
+                    <dd className="text-[#6b4334]">{EVENT_DATA.details.date}</dd>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 pb-4 border-b border-[#f0faf4]">
-                  <MapPin className="w-5 h-5 text-[#2d6a4f] shrink-0 mt-0.5" aria-hidden="true" />
+                <div className="flex items-start gap-3 pb-4 border-b border-[#fdf3e1]">
+                  <MapPin className="w-5 h-5 text-[#6b2410] shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <dt className="font-bold text-[#1a2e1a]">Venue</dt>
-                    <dd className="text-[#4a5568]">{EVENT_DATA.details.venue}</dd>
-                    <dd className="text-[#4a5568] text-sm mt-0.5">
+                    <dt className="font-bold text-[#3b1508]">Venue</dt>
+                    <dd className="text-[#6b4334]">{EVENT_DATA.details.venue}</dd>
+                    <dd className="text-[#6b4334] text-sm mt-0.5">
                       {EVENT_DATA.details.location}
                     </dd>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Shirt className="w-5 h-5 text-[#2d6a4f] shrink-0 mt-0.5" aria-hidden="true" />
+                  <Shirt className="w-5 h-5 text-[#6b2410] shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <dt className="font-bold text-[#1a2e1a]">{EVENT_DATA.dressCode.title}</dt>
-                    <dd className="text-[#4a5568]">{EVENT_DATA.dressCode.description}</dd>
+                    <dt className="font-bold text-[#3b1508]">{EVENT_DATA.dressCode.title}</dt>
+                    <dd className="text-[#6b4334]">{EVENT_DATA.dressCode.description}</dd>
                   </div>
                 </div>
               </dl>
 
-              <div className="mt-8 pt-6 border-t border-[#d8f3dc]">
-                <p className="text-xs font-bold uppercase tracking-wider text-[#2d6a4f] mb-3">
-                  Countdown to 24th December 2026
+              <div className="mt-8 pt-6 border-t border-[#f6dcb8]">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#6b2410] mb-3">
+                  Countdown to 23rd December 2026
                 </p>
-                <div className="bg-[#0d1f12] rounded-2xl p-4 inline-block">
+                <div className="bg-[#2a0e05] rounded-2xl p-4 inline-block">
                   <CountdownTimer />
                 </div>
               </div>
@@ -75,12 +76,12 @@ export default function EventPage() {
 
             {/* Who is Welcome */}
             <div className="space-y-8">
-              <div className="bg-white rounded-[24px] p-8 sm:p-10 shadow-md border border-[#d8f3dc]">
+              <div className="bg-white rounded-[24px] p-8 sm:p-10 shadow-md border border-[#f6dcb8]">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#d8f3dc] text-[#2d6a4f] flex items-center justify-center">
+                  <div className="w-11 h-11 rounded-xl bg-[#f6dcb8] text-[#6b2410] flex items-center justify-center">
                     <Users className="w-5 h-5" aria-hidden="true" />
                   </div>
-                  <h2 className="text-2xl font-bold text-[#1a2e1a]">
+                  <h2 className="text-2xl font-bold text-[#3b1508]">
                     {EVENT_DATA.welcomeListTitle}
                   </h2>
                 </div>
@@ -89,10 +90,10 @@ export default function EventPage() {
                   {EVENT_DATA.welcomeList.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-3 text-[#4a5568] text-base"
+                      className="flex items-center gap-3 text-[#6b4334] text-base"
                     >
                       <CheckCircle2
-                        className="w-5 h-5 text-[#40916c] shrink-0"
+                        className="w-5 h-5 text-[#c2410c] shrink-0"
                         aria-hidden="true"
                       />
                       <span>{item}</span>
@@ -114,16 +115,31 @@ export default function EventPage() {
         </div>
       </section>
 
+      {/* Activities (official poster) */}
+      <section className="section-sm bg-[var(--cream)] border-t border-[#f6dcb8]">
+        <div className="container-site max-w-5xl text-center">
+          <h2 className="brush-label">Activities</h2>
+          <ul className="activities-box mt-6 px-5 py-7 sm:px-10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+            {FEST_ACTIVITIES.map((activity) => (
+              <li key={activity} className="flex items-center gap-3 font-bold text-[#3b1508]">
+                <CheckCircle2 className="w-5 h-5 text-[#d9480f] shrink-0" aria-hidden="true" />
+                <span>{activity}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Venue Map */}
       <section className="section bg-white">
         <div className="container-site">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
               <div className="section-label mb-2">Venue Location</div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1a2e1a]">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#3b1508]">
                 {EVENT_DATA.map.title}
               </h2>
-              <p className="text-[#4a5568] mt-1">{EVENT_DATA.map.subtitle}</p>
+              <p className="text-[#6b4334] mt-1">{EVENT_DATA.map.subtitle}</p>
             </div>
             <a
               href={EVENT_DATA.map.directionsUrl}
@@ -136,7 +152,7 @@ export default function EventPage() {
             </a>
           </div>
 
-          <div className="rounded-[24px] overflow-hidden shadow-lg border border-[#d8f3dc] h-[380px] sm:h-[440px] bg-[#f0faf4]">
+          <div className="rounded-[24px] overflow-hidden shadow-lg border border-[#f6dcb8] h-[380px] sm:h-[440px] bg-[#fdf3e1]">
             <iframe
               title="Map showing Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya"
               src={EVENT_DATA.map.embedUrl}

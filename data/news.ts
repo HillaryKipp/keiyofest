@@ -39,16 +39,16 @@ export const NEWS_DATA = {
   posts: [
     {
       slug: "keiyo-cultural-fest-2026-official-announcement",
-      title: "KEIYO CULTURAL FEST 2026 Set for 24th December at Buffalo Safaris – Kolol",
+      title: "KEIYO CULTURAL FEST 2026 Set for 23rd December at Buffalo Safaris – Kolol",
       category: "Official Announcements",
       date: "November 2026",
       excerpt:
-        "Join us on Thursday, 24th December 2026 at Buffalo Safaris – Kolol along the Iten–Kabarnet Road in Elgeyo Marakwet County for an annual celebration of Keiyo heritage.",
+        "Join us on Wednesday, 23rd December 2026 at Buffalo Safaris – Kolol along the Iten–Kabarnet Road in Elgeyo Marakwet County for an annual celebration of Keiyo heritage.",
       image: SITE_IMAGES.hero.src,
       imageAlt: SITE_IMAGES.hero.alt,
       content: [
-        "KEIYO CULTURAL FEST 2026 will take place on Thursday, 24th December 2026 at Buffalo Safaris – Kolol, Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya.",
-        "Guided by the theme 'Celebrating Our Heritage, Preserving Our Identity and Promoting Unity', the Fest brings together Keiyo community members, government leaders and representatives, cultural groups and performers, tourists and visitors, youth and professionals, corporate organisations and partners, and friends of the Keiyo community.",
+        "KEIYO CULTURAL FEST 2026 will take place on Wednesday, 23rd December 2026 at Buffalo Safaris – Kolol, Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya.",
+        "Guided by the theme 'Our Culture, Our Pride, Our Unity', the Fest brings together Keiyo community members, government leaders and representatives, cultural groups and performers, tourists and visitors, youth and professionals, corporate organisations and partners, and friends of the Keiyo community.",
         "Visitors can look forward to traditional Keiyo dances and music, traditional cuisine including Mursik, cultural exhibitions and artefacts, traditional attire and fashion, live entertainment, and tourism excursions to Rimoi National Reserve.",
       ],
     },
@@ -73,11 +73,11 @@ export const NEWS_DATA = {
       category: "Ticket Booking Announcements",
       date: "November 2026",
       excerpt:
-        "Four ticket categories — Early Bird Regular, Early Bird VIP, Standard / General Admission, and VIP Admission — alongside sponsorship and partnership opportunities.",
+        "Three ticket categories — Early Bird Regular (KES 1,499), Early Bird VIP (KES 4,440) and Standard (KES 1,550) — alongside sponsorship and partnership opportunities.",
       image: SITE_IMAGES.festivalCrowd.src,
       imageAlt: SITE_IMAGES.festivalCrowd.alt,
       content: [
-        "Visitors will be able to purchase tickets through the official event booking platform and designated payment channels across four categories: Early Bird Regular, Early Bird VIP, Standard / General Admission, and VIP Admission.",
+        "Visitors will be able to purchase tickets through the official event booking platform and designated payment channels across three categories: Early Bird Regular at KES 1,499, Early Bird VIP at KES 4,440, and Standard at KES 1,550.",
         "KEIYO CULTURAL FEST 2026 also welcomes partnerships and sponsorships from government institutions, corporate organisations, tourism stakeholders, businesses, development partners and individuals who share our vision of cultural preservation and community empowerment.",
         "Organisations interested in sponsorship, partnership, exhibition or participation can reach out via our Partners page or Contact form.",
       ],

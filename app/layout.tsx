@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Poppins, Rye } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,15 +7,19 @@ import RevealObserver from "@/components/RevealObserver";
 import PageLoader from "@/components/PageLoader";
 import { SITE_CONFIG, SITE_IMAGES } from "@/data/site";
 
-const inter = Inter({
+// Poster typography: Poppins (body, headings, date/ticket blocks) + Rye (ornate "KEIYO CULTURAL" display title)
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const rye = Rye({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  weight: "400",
+  variable: "--font-rye",
   display: "swap",
 });
 
@@ -26,7 +30,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description:
-    "Join us on 24th December 2026 at Buffalo Safaris – Kolol, Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya, for KEIYO CULTURAL FEST 2026 — Celebrating Our Heritage, Identity and Unity.",
+    "Join us on 23rd December 2026 at Buffalo Safaris – Kolol, Iten–Kabarnet Road, Elgeyo Marakwet County, Kenya, for KEIYO CULTURAL FEST 2026 — Our Culture, Our Pride, Our Unity.",
   alternates: {
     canonical: "/",
   },
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     title: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline}`,
     description:
-      "Experience the beauty, richness and uniqueness of Keiyo culture on 24th December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County, Kenya.",
+      "Experience the beauty, richness and uniqueness of Keiyo culture on 23rd December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County, Kenya.",
     images: [
       {
         url: SITE_IMAGES.ogImage,
@@ -51,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline}`,
     description:
-      "24th December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County, Kenya.",
+      "23rd December 2026 at Buffalo Safaris – Kolol, Elgeyo Marakwet County, Kenya.",
     images: [SITE_IMAGES.ogImage],
   },
   icons: {
@@ -68,11 +72,11 @@ const eventJsonLd = {
   "@context": "https://schema.org",
   "@type": "Event",
   name: SITE_CONFIG.name,
-  startDate: "2026-12-24",
+  startDate: "2026-12-23",
   eventStatus: "https://schema.org/EventScheduled",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   description:
-    "Celebrating Our Heritage, Preserving Our Identity and Promoting Unity. Traditional Keiyo dances, music, cuisine including Mursik, cultural exhibitions, attire, entertainment and tourism excursions to Rimoi National Reserve.",
+    "Our Culture, Our Pride, Our Unity. Traditional Keiyo dances, music, cuisine including Mursik, cultural exhibitions, attire, entertainment and tourism excursions to Rimoi National Reserve.",
   image: [`${SITE_CONFIG.domain}${SITE_IMAGES.ogImage}`],
   location: {
     "@type": "Place",
@@ -99,9 +103,9 @@ export default function RootLayout({
   return (
     <html
       lang="en-KE"
-      className={`${inter.variable} ${playfair.variable}`}
+      className={`${poppins.variable} ${rye.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-white text-[#1a2e1a] antialiased">
+      <body className="min-h-screen flex flex-col bg-[var(--cream-light)] text-[#3b1508] antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
