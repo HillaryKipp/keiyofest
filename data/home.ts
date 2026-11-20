@@ -2,7 +2,6 @@ import { SITE_IMAGES } from "./site";
 
 export const HOME_DATA = {
   hero: {
-    eyebrow: "Annual Cultural Celebration • Elgeyo Marakwet County",
     headline: "Welcome to KEIYO CULTURAL FEST 2026",
     subcopy:
       "Experience the beauty, richness and uniqueness of Keiyo culture at KEIYO CULTURAL FEST 2026, a spectacular celebration bringing together communities, leaders, cultural enthusiasts, tourists and friends of the Keiyo people.",

@@ -65,11 +65,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-[1.28fr_0.72fr] gap-10 lg:gap-12 items-center">
             {/* Left Column: Title, Theme, Countdown & CTAs */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2a0e05]/70 border border-[#f7a21b]/35 backdrop-blur-md text-[11px] sm:text-xs font-bold uppercase tracking-[0.14em] text-[#fbbf3c] mb-5">
-                <span className="w-2 h-2 rounded-full bg-[#f7a21b]" aria-hidden="true" />
-                <span>{HOME_DATA.hero.eyebrow}</span>
-              </div>
-
               <h1 className="text-white leading-[1.04]">
                 <span className="sr-only">{HOME_DATA.hero.headline}</span>
                 <span
