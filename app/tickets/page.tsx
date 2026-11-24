@@ -155,6 +155,10 @@ export default function TicketsPage() {
                 formTitle="Ticket Booking Request"
                 formType="booking"
                 submitLabel="Submit Booking Request"
+                whatsappOption={{
+                  label: "Request on WhatsApp",
+                  phone: paymentDetails.verificationWhatsapp,
+                }}
                 fields={[
                   {
                     name: "fullName",

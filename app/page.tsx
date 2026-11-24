@@ -491,21 +491,30 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {HOME_DATA.tourismTeaser.cards.map((card, idx) => (
               <div
                 key={card.title}
-                className="prog-card reveal"
-                style={{ transitionDelay: `${idx * 0.12}s` }}
+                className="bg-white rounded-[20px] overflow-hidden border border-[#f6dcb8] shadow-sm hover:shadow-md transition flex flex-col reveal"
+                style={{ transitionDelay: `${idx * 0.1}s` }}
               >
-                <Compass className="w-8 h-8 text-[#c2410c] mb-4" aria-hidden="true" />
-                <div className="section-label mb-2">{card.tag}</div>
-                <h3 className="text-xl font-bold text-[#3b1508] mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-[#6b4334] leading-relaxed">
-                  {card.description}
-                </p>
+                <div className="h-52 overflow-hidden bg-[#2a0e05]">
+                  <img
+                    src={card.image}
+                    alt={card.imageAlt}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="section-label mb-1.5">{card.tag}</div>
+                  <h3 className="text-lg font-bold text-[#3b1508] mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-[#6b4334] leading-relaxed flex-1">
+                    {card.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

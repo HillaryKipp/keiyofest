@@ -129,6 +129,34 @@ export const GALLERY_DATA = {
       caption: "Iten — gateway to Elgeyo Marakwet County",
       category: "Preparations",
     },
+    {
+      id: "g-13",
+      src: SITE_IMAGES.torokFalls.src,
+      alt: SITE_IMAGES.torokFalls.alt,
+      caption: "Torok Falls plunging down the Elgeyo Escarpment",
+      category: "Tourism & Wildlife",
+    },
+    {
+      id: "g-14",
+      src: SITE_IMAGES.itenKabarnetRoad.src,
+      alt: SITE_IMAGES.itenKabarnetRoad.alt,
+      caption: "Scenic winding Iten–Kabarnet Road into Kerio Valley",
+      category: "Tourism & Wildlife",
+    },
+    {
+      id: "g-15",
+      src: SITE_IMAGES.kerioMangoes.src,
+      alt: SITE_IMAGES.kerioMangoes.alt,
+      caption: "Fresh sun-ripened mangoes from Kerio Valley",
+      category: "Food",
+    },
+    {
+      id: "g-16",
+      src: SITE_IMAGES.rimoiElephantsHerd.src,
+      alt: SITE_IMAGES.rimoiElephantsHerd.alt,
+      caption: "Elephants roaming Rimoi National Reserve, Elgeyo Marakwet",
+      category: "Tourism & Wildlife",
+    },
   ] as GalleryPhoto[],
   videos: [
     {

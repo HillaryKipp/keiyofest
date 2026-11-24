@@ -115,6 +115,22 @@ export const SITE_IMAGES = {
     src: "/images/festival-crowd.webp",
     alt: "Kenyan cultural festival celebration and community gathering",
   },
+  torokFalls: {
+    src: "/images/torok-falls-escarpment.webp",
+    alt: "Torok Falls cascading down the dramatic Elgeyo Escarpment cliffs with wildflowers in the foreground",
+  },
+  itenKabarnetRoad: {
+    src: "/images/iten-kabarnet-road.webp",
+    alt: "Scenic winding hairpin bends of the Iten–Kabarnet Road descending the Elgeyo Escarpment into Kerio Valley",
+  },
+  kerioMangoes: {
+    src: "/images/kerio-valley-mangoes.webp",
+    alt: "Fresh sun-ripened mangoes harvested from the fertile Kerio Valley in Elgeyo Marakwet County",
+  },
+  rimoiElephantsHerd: {
+    src: "/images/rimoi-elephants-herd.webp",
+    alt: "Herd of African elephants crossing a bushland trail in Rimoi National Reserve, Elgeyo Marakwet County",
+  },
 };
 
 export interface NavItem {

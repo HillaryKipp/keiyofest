@@ -19,8 +19,48 @@ export const TOURISM_DATA = {
     ],
     motto: "Discover our culture. Explore our landscapes. Experience our heritage.",
     note: "Other tourism experiences and excursion arrangements can be added as they are confirmed.",
-    image: SITE_IMAGES.elephantsHerd.src,
-    imageAlt: SITE_IMAGES.elephantsHerd.alt,
+    image: SITE_IMAGES.rimoiElephantsHerd.src,
+    imageAlt: SITE_IMAGES.rimoiElephantsHerd.alt,
+  },
+  showcase: {
+    eyebrow: "Explore the Region",
+    heading: "Sights & Flavours of Elgeyo Marakwet",
+    subtitle:
+      "From breathtaking escarpment waterfalls and winding mountain roads to wildlife encounters and sweet Kerio Valley mangoes.",
+    items: [
+      {
+        tag: "Wildlife Sanctuary",
+        title: "Rimoi National Reserve",
+        description:
+          "Spot herds of African elephants roaming freely through the lush acacia bushland of the Kerio Valley corridor.",
+        image: SITE_IMAGES.rimoiElephantsHerd.src,
+        imageAlt: SITE_IMAGES.rimoiElephantsHerd.alt,
+      },
+      {
+        tag: "Scenic Drive",
+        title: "Iten–Kabarnet Escarpment Road",
+        description:
+          "Experience the unforgettable hairpin bends descending from the highlands of Iten to Buffalo Safaris – Kolol.",
+        image: SITE_IMAGES.itenKabarnetRoad.src,
+        imageAlt: SITE_IMAGES.itenKabarnetRoad.alt,
+      },
+      {
+        tag: "Waterfalls & Cliffs",
+        title: "Torok Falls & Elgeyo Escarpment",
+        description:
+          "Take in panoramic views of dramatic waterfalls plunging down towering rock faces framed by highland flora.",
+        image: SITE_IMAGES.torokFalls.src,
+        imageAlt: SITE_IMAGES.torokFalls.alt,
+      },
+      {
+        tag: "Kerio Valley Harvest",
+        title: "Famous Kerio Valley Mangoes",
+        description:
+          "Enjoy fresh, naturally sweet mangoes and local farm produce celebrated across Kenya and grown right in the valley.",
+        image: SITE_IMAGES.kerioMangoes.src,
+        imageAlt: SITE_IMAGES.kerioMangoes.alt,
+      },
+    ],
   },
   highlights: [
     {

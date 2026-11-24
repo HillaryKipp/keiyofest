@@ -62,6 +62,47 @@ export default function TourismPage() {
         </div>
       </section>
 
+      {/* Sights & Flavours Photo Showcase */}
+      <section className="section bg-[#fdf3e1]">
+        <div className="container-site">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="section-label mb-3">{TOURISM_DATA.showcase.eyebrow}</div>
+            <h2 className="text-[clamp(26px,3.5vw,40px)] font-bold text-[#3b1508]">
+              {TOURISM_DATA.showcase.heading}
+            </h2>
+            <p className="text-[#6b4334] mt-3">{TOURISM_DATA.showcase.subtitle}</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {TOURISM_DATA.showcase.items.map((item, idx) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-[20px] overflow-hidden border border-[#f6dcb8] shadow-sm hover:shadow-md transition flex flex-col reveal"
+                style={{ transitionDelay: `${idx * 0.1}s` }}
+              >
+                <div className="h-60 overflow-hidden bg-[#2a0e05]">
+                  <img
+                    src={item.image}
+                    alt={item.imageAlt}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="section-label mb-1.5">{item.tag}</div>
+                  <h3 className="text-lg font-bold text-[#3b1508] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-[#6b4334] leading-relaxed flex-1">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Highlights Grid */}
       <section className="section bg-white">
         <div className="container-site">

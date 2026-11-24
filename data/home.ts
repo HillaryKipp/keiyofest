@@ -127,19 +127,33 @@ export const HOME_DATA = {
         tag: "Wildlife Excursion",
         title: "Rimoi National Reserve",
         description:
-          "For wildlife and nature lovers, organised excursions towards Rimoi National Reserve will offer an opportunity to explore one of the region's unique wildlife destinations.",
+          "Experience guided wildlife viewing of elephants in their natural Kerio Valley bushland habitat at Rimoi National Reserve.",
+        image: SITE_IMAGES.rimoiElephantsHerd.src,
+        imageAlt: SITE_IMAGES.rimoiElephantsHerd.alt,
       },
       {
-        tag: "Nature Viewing",
-        title: "Elephants & Landscapes",
+        tag: "Scenic Route to Kolol",
+        title: "Iten–Kabarnet Road",
         description:
-          "Visitors will have an opportunity to experience wildlife viewing, particularly elephants, and discover the natural beauty of the reserve.",
+          "Take in breathtaking views along the iconic winding escarpment highway leading directly to Buffalo Safaris – Kolol.",
+        image: SITE_IMAGES.itenKabarnetRoad.src,
+        imageAlt: SITE_IMAGES.itenKabarnetRoad.alt,
       },
       {
-        tag: "Cultural Tourism",
-        title: "Unforgettable Experience",
+        tag: "Natural Wonder",
+        title: "Torok Falls & Escarpment",
         description:
-          "The excursion will be an additional attraction for visitors seeking an unforgettable cultural and tourism experience. Discover our culture. Explore our landscapes.",
+          "Marvel at dramatic waterfalls cascading down the rugged red cliffs of the Elgeyo Escarpment into the lush valley below.",
+        image: SITE_IMAGES.torokFalls.src,
+        imageAlt: SITE_IMAGES.torokFalls.alt,
+      },
+      {
+        tag: "Local Harvest",
+        title: "Kerio Valley Mangoes",
+        description:
+          "Taste the famous sun-ripened mangoes and fresh local produce harvested across the fertile Kerio Valley floor.",
+        image: SITE_IMAGES.kerioMangoes.src,
+        imageAlt: SITE_IMAGES.kerioMangoes.alt,
       },
     ],
     ctaLabel: "Explore Tourism & Excursions",

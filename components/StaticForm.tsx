@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { CheckCircle2, AlertCircle, Send } from "lucide-react";
+import { CheckCircle2, AlertCircle, MessageCircle, Send } from "lucide-react";
 import { CONTACT_DETAILS, SITE_CONFIG } from "@/data/site";
 
 export interface FormFieldConfig {
@@ -19,6 +19,10 @@ interface StaticFormProps {
   formType: "enquiry" | "partnership" | "booking";
   fields: FormFieldConfig[];
   submitLabel?: string;
+  whatsappOption?: {
+    label?: string;
+    phone?: string;
+  };
 }
 
 export default function StaticForm({
@@ -26,6 +30,7 @@ export default function StaticForm({
   formType,
   fields,
   submitLabel = "Submit",
+  whatsappOption,
 }: StaticFormProps) {
   const initialValues: Record<string, string> = {};
   fields.forEach((f) => {
@@ -42,21 +47,48 @@ export default function StaticForm({
     if (validationError) setValidationError("");
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setValidationError("");
-
+  const validateForm = () => {
     for (const field of fields) {
       const val = (values[field.name] || "").trim();
       if (field.required && !val) {
         setValidationError(`Please fill in ${field.label}.`);
-        return;
+        return false;
       }
       if (field.type === "email" && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
         setValidationError("Please enter a valid email address.");
-        return;
+        return false;
       }
     }
+    return true;
+  };
+
+  const buildSummaryText = () => {
+    const summaryLines = fields
+      .filter((f) => (values[f.name] || "").trim() !== "" || f.required)
+      .map((f) => `${f.label}: ${(values[f.name] || "").trim() || "-"}`)
+      .join("\n");
+    return `${formTitle} — ${SITE_CONFIG.name}\n\n${summaryLines}`;
+  };
+
+  const whatsappNumber = (whatsappOption?.phone ?? CONTACT_DETAILS.whatsapp).replace(/\D/g, "");
+
+  const handleWhatsAppRequest = () => {
+    setValidationError("");
+    if (!validateForm() || !whatsappNumber) return;
+
+    const encodedBody = encodeURIComponent(buildSummaryText());
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedBody}`, "_blank", "noopener,noreferrer");
+    setStatus("success");
+    setStatusMessage(
+      "WhatsApp has been opened with your prefilled booking details. Send the message to complete your request."
+    );
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setValidationError("");
+
+    if (!validateForm()) return;
 
     setStatus("submitting");
     const endpoint = SITE_CONFIG.formEndpoint;
@@ -95,12 +127,7 @@ export default function StaticForm({
     }
 
     // Graceful static fallback when NEXT_PUBLIC_FORM_ENDPOINT is not configured
-    const summaryLines = fields
-      .map((f) => `${f.label}: ${values[f.name] || "-"}`)
-      .join("\n");
-    const encodedBody = encodeURIComponent(
-      `${formTitle} — ${SITE_CONFIG.name}\n\n${summaryLines}`
-    );
+    const encodedBody = encodeURIComponent(buildSummaryText());
 
     if (CONTACT_DETAILS.email.trim()) {
       const subj = encodeURIComponent(`${formTitle} — ${SITE_CONFIG.name}`);
@@ -217,14 +244,27 @@ export default function StaticForm({
         })}
       </div>
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        className="btn btn-primary w-full sm:w-auto disabled:opacity-60"
-      >
-        <Send className="w-4 h-4" aria-hidden="true" />
-        <span>{status === "submitting" ? "Sending..." : submitLabel}</span>
-      </button>
+      <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="btn btn-primary w-full sm:w-auto disabled:opacity-60"
+        >
+          <Send className="w-4 h-4" aria-hidden="true" />
+          <span>{status === "submitting" ? "Sending..." : submitLabel}</span>
+        </button>
+
+        {whatsappOption && whatsappNumber && (
+          <button
+            type="button"
+            onClick={handleWhatsAppRequest}
+            className="btn w-full sm:w-auto bg-[#15803d] hover:bg-[#166534] text-white border border-[#15803d] cursor-pointer"
+          >
+            <MessageCircle className="w-4 h-4" aria-hidden="true" />
+            <span>{whatsappOption.label || "Request on WhatsApp"}</span>
+          </button>
+        )}
+      </div>
     </form>
   );
 }
