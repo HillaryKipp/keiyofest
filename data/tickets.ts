@@ -19,11 +19,21 @@ export const TICKETS_DATA = {
     imageAlt: SITE_IMAGES.festivalCrowd.alt,
   },
   intro:
-    "Visitors will be able to purchase tickets through the official event booking platform and designated payment channels.",
+    "Pay securely via M-Pesa Paybill (522533, Account No: 8888529 — KEIYO CULTURAL FEST) and contact 0704 168 063 to verify your payment and attendance.",
   /**
    * PLACEHOLDER: Set official booking platform URL when available (e.g. "https://tickets.keiyoculturalfest.co.ke")
    */
   bookingPlatformUrl: "",
+  paymentDetails: {
+    method: "M-Pesa Paybill",
+    paybill: "522533",
+    accountNumber: "8888529",
+    accountName: "KEIYO CULTURAL FEST",
+    verificationPhone: "0704168063",
+    verificationPhoneDisplay: "0704 168 063",
+    verificationPhoneTel: "+254704168063",
+    verificationWhatsapp: "254704168063",
+  },
   categories: [
     {
       id: "early-bird-regular",
@@ -63,17 +73,19 @@ export const TICKETS_DATA = {
     },
   ] as TicketCategory[],
   paymentInstructions: {
-    title: "Payment Instructions",
+    title: "M-Pesa Payment Instructions",
     description:
-      "Official payment channels (M-Pesa Paybill / Till and online card payment details) will be published here once confirmed.",
+      "Pay for your ticket via M-Pesa Paybill using the official details below, then contact our verification desk to confirm your attendance.",
     channels: [
-      "Official event booking platform (link to be added upon confirmation).",
-      "Designated mobile money & bank payment channels (details to be added when available).",
+      "Go to M-Pesa → Lipa na M-Pesa → Pay Bill.",
+      "Enter Business / Paybill No: 522533.",
+      "Enter Account No: 8888529 (Account Name: KEIYO CULTURAL FEST).",
+      "Enter the ticket amount for your chosen category and complete payment with your M-Pesa PIN.",
     ],
   },
   confirmationNote: {
-    title: "Confirmation and Electronic Ticket Delivery",
+    title: "Verify Payment & Confirm Attendance",
     description:
-      "Once your booking and payment are confirmed, an electronic ticket with a unique booking reference will be delivered to your registered email address and phone number. Start booking today and secure your place!",
+      "After making your payment, please call, SMS, or WhatsApp 0704 168 063 with your full name, ticket category, and M-Pesa confirmation message so our team can verify your payment and confirm your attendance.",
   },
 };

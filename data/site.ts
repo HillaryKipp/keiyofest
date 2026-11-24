@@ -50,8 +50,8 @@ export const FEST_HASHTAGS: string[] = [
  */
 export const CONTACT_DETAILS = {
   email: "keiyoculturalfest@gmail.com",
-  phone: "", // PLACEHOLDER: e.g. "+254 700 000 000"
-  whatsapp: "", // PLACEHOLDER: digits with country code, e.g. "254700000000"
+  phone: "0704 168 063",
+  whatsapp: "254704168063",
   socials: {
     facebook: "", // PLACEHOLDER: e.g. "https://facebook.com/keiyoculturalfest"
     instagram: "", // PLACEHOLDER: e.g. "https://instagram.com/keiyoculturalfest"

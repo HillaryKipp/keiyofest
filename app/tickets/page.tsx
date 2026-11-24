@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
-import { CheckCircle2, CreditCard, ExternalLink, MailCheck, Ticket } from "lucide-react";
+import {
+  CheckCircle2,
+  CreditCard,
+  ExternalLink,
+  MessageCircle,
+  Phone,
+  ShieldCheck,
+  Ticket,
+} from "lucide-react";
 import PageHero from "@/components/PageHero";
 import StaticForm from "@/components/StaticForm";
 import { TICKETS_DATA } from "@/data/tickets";
@@ -13,6 +21,10 @@ export const metadata: Metadata = {
 
 export default function TicketsPage() {
   const hasPlatform = Boolean(TICKETS_DATA.bookingPlatformUrl.trim());
+  const { paymentDetails } = TICKETS_DATA;
+  const whatsappVerifyUrl = `https://wa.me/${paymentDetails.verificationWhatsapp}?text=${encodeURIComponent(
+    "Hello KEIYO CULTURAL FEST team, I have made my ticket payment via Paybill 522533 (Account 8888529) and would like to verify my payment and attendance."
+  )}`;
 
   return (
     <>
@@ -181,6 +193,12 @@ export default function TicketsPage() {
                     required: true,
                   },
                   {
+                    name: "mpesaCode",
+                    label: "M-Pesa Confirmation Code (Optional)",
+                    type: "text",
+                    placeholder: "e.g. UKA4X92M1P",
+                  },
+                  {
                     name: "notes",
                     label: "Additional Notes (Optional)",
                     type: "textarea",
@@ -203,6 +221,34 @@ export default function TicketsPage() {
                 <p className="text-sm text-[#6b4334] leading-relaxed mb-4">
                   {TICKETS_DATA.paymentInstructions.description}
                 </p>
+
+                <div className="bg-white rounded-2xl p-5 border border-[#f5c27a] mb-5 space-y-3 shadow-xs">
+                  <div className="flex items-center justify-between gap-4 border-b border-[#f6dcb8] pb-2.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#6b4334]">
+                      Paybill No
+                    </span>
+                    <span className="font-mono text-xl font-extrabold text-[#3b1508] tracking-wide">
+                      {paymentDetails.paybill}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between gap-4 border-b border-[#f6dcb8] pb-2.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#6b4334]">
+                      Account No
+                    </span>
+                    <span className="font-mono text-xl font-extrabold text-[#3b1508] tracking-wide">
+                      {paymentDetails.accountNumber}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#6b4334]">
+                      Account Name
+                    </span>
+                    <span className="text-sm sm:text-base font-extrabold text-[#6b2410] text-right">
+                      {paymentDetails.accountName}
+                    </span>
+                  </div>
+                </div>
+
                 <ul className="space-y-2 text-sm text-[#3b1508]">
                   {TICKETS_DATA.paymentInstructions.channels.map((ch) => (
                     <li key={ch} className="flex items-start gap-2">
@@ -219,15 +265,46 @@ export default function TicketsPage() {
               <div className="bg-[#2a0e05] text-white rounded-[20px] p-7">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 rounded-xl bg-white/10 text-[#f7a21b] flex items-center justify-center">
-                    <MailCheck className="w-5 h-5" aria-hidden="true" />
+                    <ShieldCheck className="w-5 h-5" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-bold">
                     {TICKETS_DATA.confirmationNote.title}
                   </h3>
                 </div>
-                <p className="text-sm text-white/80 leading-relaxed">
+                <p className="text-sm text-white/80 leading-relaxed mb-5">
                   {TICKETS_DATA.confirmationNote.description}
                 </p>
+
+                <div className="rounded-xl bg-white/10 border border-white/15 p-4 mb-5">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#fbbf3c] mb-1">
+                    Verification Contact Number
+                  </div>
+                  <a
+                    href={`tel:${paymentDetails.verificationPhoneTel}`}
+                    className="text-xl font-extrabold text-white hover:text-[#fbbf3c] transition tracking-wide"
+                  >
+                    {paymentDetails.verificationPhoneDisplay}
+                  </a>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={`tel:${paymentDetails.verificationPhoneTel}`}
+                    className="btn btn-earth btn-sm flex-1"
+                  >
+                    <Phone className="w-4 h-4" aria-hidden="true" />
+                    <span>Call {paymentDetails.verificationPhoneDisplay}</span>
+                  </a>
+                  <a
+                    href={whatsappVerifyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline btn-sm flex-1"
+                  >
+                    <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                    <span>Verify on WhatsApp</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

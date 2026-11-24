@@ -326,7 +326,22 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <p className="text-xs font-semibold text-[#3b1508]/75 mt-4">All prices in Kenya Shillings (KES)</p>
+            <p className="text-xs font-semibold text-[#3b1508]/75 mt-4">
+              All prices in Kenya Shillings (KES)
+            </p>
+            <p className="text-xs sm:text-sm font-bold text-[#3b1508] mt-2">
+              M-Pesa Paybill:{" "}
+              <span className="font-mono">{TICKETS_DATA.paymentDetails.paybill}</span>{" "}
+              • Account No:{" "}
+              <span className="font-mono">{TICKETS_DATA.paymentDetails.accountNumber}</span>{" "}
+              ({TICKETS_DATA.paymentDetails.accountName}) • Verify:{" "}
+              <a
+                href={`tel:${TICKETS_DATA.paymentDetails.verificationPhoneTel}`}
+                className="underline hover:text-[#6b2410]"
+              >
+                {TICKETS_DATA.paymentDetails.verificationPhoneDisplay}
+              </a>
+            </p>
             <Link
               href={HOME_DATA.activities.ticketsCta.href}
               className="btn btn-primary mt-5"

@@ -77,7 +77,7 @@ export const NEWS_DATA = {
       image: SITE_IMAGES.festivalCrowd.src,
       imageAlt: SITE_IMAGES.festivalCrowd.alt,
       content: [
-        "Visitors will be able to purchase tickets through the official event booking platform and designated payment channels across three categories: Early Bird Regular at KES 1,499, Early Bird VIP at KES 4,440, and Standard at KES 1,550.",
+        "Visitors can now secure their tickets across three categories: Early Bird Regular at KES 1,499, Early Bird VIP at KES 4,440, and Standard at KES 1,550 via M-Pesa Paybill No: 522533, Account No: 8888529 (Account Name: KEIYO CULTURAL FEST). After payment, contact 0704 168 063 to verify your payment and attendance.",
         "KEIYO CULTURAL FEST 2026 also welcomes partnerships and sponsorships from government institutions, corporate organisations, tourism stakeholders, businesses, development partners and individuals who share our vision of cultural preservation and community empowerment.",
         "Organisations interested in sponsorship, partnership, exhibition or participation can reach out via our Partners page or Contact form.",
       ],

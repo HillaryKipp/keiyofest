@@ -36,7 +36,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     question: "How can I purchase tickets?",
     answer:
-      "Tickets will be available through the official event booking platform and designated payment channels.",
+      "Pay via M-Pesa Paybill No: 522533, Account No: 8888529 (Account Name: KEIYO CULTURAL FEST). After payment, call, SMS, or WhatsApp 0704 168 063 to verify your payment and confirm your attendance.",
   },
   {
     question: "How can organisations participate?",
