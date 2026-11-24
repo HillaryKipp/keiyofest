@@ -124,7 +124,7 @@ export default function TicketsPage() {
                   </a>
                 ) : (
                   <a
-                    href="#booking-form"
+                    href="#mpesa-payment"
                     className={`btn w-full ${
                       cat.highlighted ? "btn-earth" : "btn-primary"
                     }`}
@@ -213,7 +213,10 @@ export default function TicketsPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-[#fdf3e1] rounded-[20px] p-7 border border-[#f6dcb8]">
+              <div
+                id="mpesa-payment"
+                className="scroll-mt-28 bg-[#fdf3e1] rounded-[20px] p-7 border border-[#f6dcb8]"
+              >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 rounded-xl bg-[#f6dcb8] text-[#6b2410] flex items-center justify-center">
                     <CreditCard className="w-5 h-5" aria-hidden="true" />
