@@ -44,7 +44,7 @@ export const TICKETS_DATA = {
         "Full-day general admission to KEIYO CULTURAL FEST 2026",
         "Live Kalenjin music performances & traditional dances",
         "Access to Keiyo cultural artifacts, art & crafts exhibitions",
-        "Electronic ticket confirmation upon booking",
+        "Payment & attendance verification via 0704 168 063",
       ],
     },
     {
@@ -57,7 +57,7 @@ export const TICKETS_DATA = {
         "Priority VIP seating and reserved viewing area",
         "Full access to performances, dances, exhibitions & seminars",
         "Dedicated VIP hospitality and networking access",
-        "Electronic ticket confirmation upon booking",
+        "Payment & attendance verification via 0704 168 063",
       ],
     },
     {
@@ -68,7 +68,7 @@ export const TICKETS_DATA = {
         "Full-day general admission on 23rd December 2026",
         "Access to Mursik & local cuisine and exhibition grounds",
         "Access to leadership seminars & community discussions",
-        "Electronic ticket confirmation upon booking",
+        "Payment & attendance verification via 0704 168 063",
       ],
     },
   ] as TicketCategory[],
